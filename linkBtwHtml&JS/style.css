@@ -1,0 +1,20 @@
+.para{
+    font-size: x-large;
+}
+
+.blue{
+    background-color: blueviolet;
+}
+
+.strong{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.red{
+    background-color: red;
+    height: 12vh;
+}
+
+.textColor{
+    color: cornflowerblue;
+}

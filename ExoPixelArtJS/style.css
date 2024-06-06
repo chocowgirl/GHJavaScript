@@ -1,0 +1,45 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+.palette td{
+    width: 50px;
+    height: 20px;
+}
+
+.jaune{
+    background-color: yellow;
+}
+.bleu{
+    background-color: lightskyblue;
+}
+.noir{
+    background-color: black;
+    color: aliceblue;
+}
+
+.rose{
+    background-color: pink;
+}
+.vert{
+    background-color: green;
+}
+.bisque{
+    background-color: bisque;
+}
+.brun{
+    background-color: brown;
+}
+.rouge{
+    background-color: red;
+}
+.magenta{
+    background-color: magenta;
+}
