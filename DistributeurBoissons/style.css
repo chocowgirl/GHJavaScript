@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+
+}
+
+main{
+    height:80vw;
+}
+
+#vending_body{
+    width : 35%;
+    height: 60%;
+    background-color: black;
+    display:flex;
+    padding-top: 10px;
+
+}
+
+#vending_window{
+    background-color: lightcyan;
+    width: 70%;
+    height: 70%;
+    margin: 30px 0 0 40px;
+    display: inline-block;
+}
+
+#selection_pad{
+    display: flex;
+    border: 1px solid red;
+    flex-direction: column;
+    width: 12%;
+    height: 50%;
+    margin: 30px 0 0 10px;
+    align-items: flex-start;
+    margin-left: 5%;
+}
+
+
+button{
+    width: 50px;
+    height: 50px;
+    font-size:x-small;
+    justify-content: center;
+
+}
+
+/* #delivery_slot{
+    display: flexbox;
+    width: 5%;
+    height: 8%;
+    background-color: slategray;
+    color: lightgray;
+    align-self: flex-end;
+} */
+
+#water, #coca, #sprite, #oasis{
+    width:24%;
+    height:100%;
+    background-color: aquamarine;
+    display: inline-block;
+}
