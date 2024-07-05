@@ -14,7 +14,6 @@ console.log(nombre === "26"); //will give false in console bc is not equal in va
 
 
 
-
 //concatenation entre str et number
 console.log("26" + 26); //pas de convertion implicite (resultat : 2626)
 
@@ -31,13 +30,13 @@ ageUtilisateur = ageUtilisateur + 1;
 console.log(ageUtilisateur);
 
 ageUtilisateur = "Bonjour";
-console.log(ageUtilisateur);
+console.log(ageUtilisateur);//This shows us that a let can be modified.
 
 ////////////////////PROMPTS/////////////
 //allows us to recuperer un valeur and assign values to a variable via the input
 console.log("Prompt :");
 ageUtilisateur = prompt("veuillez entrer votre age: ");
-console.log(ageUtilisateur); //becomes what the user puts in 
+console.log(ageUtilisateur); //becomes what the user has put in at the prompt associated to the variable
 console.log(typeof(ageUtilisateur));
 ageUtilisateur = +ageUtilisateur//converstion explicite of string to number
 console.log(typeof(ageUtilisateur));//this should show up as a number now and not a string
@@ -78,3 +77,4 @@ console.dir(inputNumber.valueAsNumber)//gives the specific number (in type numbe
 const inputText=document.getElementById("inputText")
 console.dir(inputText)//gives directory of the element with tons of info about the element
 console.dir(inputText.value)//gives the specific text (in type string) value of the element
+//note that .valueAsNumber won't work on anything that is text.  It doesn't convert.

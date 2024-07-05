@@ -1,10 +1,10 @@
-///// ADDITION DE BOUCLE POUR AUTOMATISER //////
+///// ADDITION DE BOUCLE POUR AUTOMATISER //////****/
 //besoin de recuperer le node list pour boutons de presence
 const BOUT_PRES = document.querySelectorAll(".boutonPresence")
 const BOUT_ABS = document.querySelectorAll(".boutonAbsence")
 
 //pour comportement boutons presences
-// et impacter le column status
+// et impacter la colonne status:
 for (let i = 0; i < BOUT_PRES.length; i++) {
     BOUT_PRES[i].addEventListener("click", function(){
         // console.dir(BOUT_PRES[i])//on voit que previous elem sibling is status column et next is red button column
@@ -31,3 +31,14 @@ for (let i = 0; i < BOUT_PRES.length; i++) {
     
 }
 
+//THIS IS ME LATER ADDING A RESET BUTTON WITH A BOUCLE :)
+const resetbtns = document.querySelectorAll('.reset');
+console.log("resetbtns" + resetbtns);
+
+for (let i = 0; i < resetbtns.length; i++) {
+    resetbtns[i].addEventListener("click", function(){
+        resetbtns[i].previousElementSibling.textContent = "❌";
+        resetbtns[i].previousElementSibling.previousElementSibling.textContent = "✔️";
+        resetbtns[i].previousElementSibling.previousElementSibling.previousElementSibling.textContent = " ";
+    });
+};

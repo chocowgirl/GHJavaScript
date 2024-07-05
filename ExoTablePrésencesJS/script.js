@@ -47,6 +47,19 @@ presentButton3.addEventListener("click", function(){
     absentButton3.innerHTML = "❌";
 });
 
+
+//THIS IS ME LATER ADDING A RESET BUTTON WITH A BOUCLE :)
+const resetbtns = document.querySelectorAll('.reset');
+console.log("resetbtns" + resetbtns);
+
+for (let i = 0; i < resetbtns.length; i++) {
+    resetbtns[i].addEventListener("click", function(){
+        resetbtns[i].previousElementSibling.textContent = "❌";
+        resetbtns[i].previousElementSibling.previousElementSibling.textContent = "✔️";
+        resetbtns[i].previousElementSibling.previousElementSibling.previousElementSibling.textContent = " ";
+    });
+};
+
 ///////////////// solution prof /////////////
 
 // **** POUR RECUPERER LES ELEMENTS AVEC ID ****
@@ -73,4 +86,3 @@ presentButton3.addEventListener("click", function(){
 //     boutonAbsence.textContent = ""
 //     boutonPresence.textContent = "✔️"
 // }
-

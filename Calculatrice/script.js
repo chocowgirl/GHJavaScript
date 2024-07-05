@@ -50,7 +50,10 @@ if(!isNaN(nombre1)){
     if(operator === "+" || operator === "-" || operator === "/" || operator === "*"){
         let nombre2 = parseFloat(prompt("Donnez moi une deuxième chiffre: "));
         if(!isNaN(nombre2)){
-            if(operator === "/"){
+            if(operator === "/" && nombre2 == 0){
+                alert("division par 0 impossible");
+            }
+            else if(operator ==="/"){
                 let result = nombre1 / nombre2;
                 alert("votre resultat est :" + result)
             }

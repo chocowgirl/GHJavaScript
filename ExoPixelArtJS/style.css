@@ -28,18 +28,31 @@ td{
 .rose{
     background-color: pink;
 }
+
 .vert{
     background-color: green;
 }
+
 .bisque{
     background-color: bisque;
 }
+
 .brun{
     background-color: brown;
 }
+
 .rouge{
     background-color: red;
 }
+
 .magenta{
     background-color: magenta;
+}
+
+button{
+    width: 90px;
+    height: 50px;
+    color : red;
+    background-color: aqua;
+    border-radius: 30px;
 }

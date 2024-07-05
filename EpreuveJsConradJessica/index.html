@@ -1,0 +1,48 @@
+<!-- /// CONRAD JESSICA /// -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess the number</h1>
+    <div id="divWrapper">
+
+<!-- This section is for the game -->
+        <div id="divGame">
+            <br>
+            <label for="inputGuess"><span>Guess a number between 1 and 100.</span>  (Anything that's not a while number will be rounded up!)</label>
+            <input type="number" id="inputGuess" max="100" min="1">
+            <button id="btnSubmit">Submit Guess</button>
+            <br>
+            <p id="hintPara"></p>
+            <p id="remainingTries"></p>
+            <p id="replay"></p>
+        </div>
+
+<!-- This section is for the table that lists previous guesses -->
+        <div id="divRecap">
+            <h3>Review of your guesses</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Previous guesses</th>
+                    </tr>
+                </thead>
+                <tbody id="tblPreviousGuess">
+    
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
