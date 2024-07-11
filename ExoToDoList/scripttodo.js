@@ -1,6 +1,6 @@
 const taskEntry = document.getElementById("entry");
 const addbutton = document.getElementById("addbutton");
-const clrbutton = document.getElementById("clrbutton")
+// const clrbutton = document.getElementById("clrbutton")
 const list = document.getElementById("list");
 
 

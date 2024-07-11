@@ -54,33 +54,41 @@ const container = document.getElementById("container");
 p1.remove(); // there is no return associated
 container.removeChild(p2);
 
+
+
 //(propriete) parentNode (permet de recuperer le noeud parent)
 const addButtons =document.querySelectorAll(".addBtn");
 console.log("add buttons:", addButtons);
+//console.log('object :>> ', object); //clo shortcutclo
+
 
 
 for (const button of addButtons) {
     // console.log("element:", element);
     button.addEventListener("click", (event) => {
-        // console.log("event target", event.target);
-        // console.log("button", button);
-
+        // console.log("event target", event.target); -->here we recup the button
+        // console.log("button", button); --> here as well
 //event = event triggered
 //target = target of the event triggered
 //parentNode = parent of the target of the event triggered
-        console.log("event.target.parentNode:", event.target.parentNode);
-        console.log("event.target.parentNode.parentNode:", event.target.parentNode.parentNode);
+
+//en dessous, on utilise des clgs pour nous orienter dans le DOM pour trouver la LIGNE dans lequel que le bouton reside:
+        console.log("event.target.parentNode:", event.target.parentNode);//here we see the parent node of the button is the td that the button lives in.
+        console.log("event.target.parentNode.parentNode:", event.target.parentNode.parentNode);//heee we see we've arrived at the tr for the button
+
 //recuperation de la ligne <tr> du produit 
         const productRow = event.target.parentNode.parentNode;
-//extraction des enfants de la ligne du produit
-        console.log("productRow.chilren:", productRow.children)
-        console.log("productRow.children[0] :", productRow.children[0]);
-        console.log("productRow.children[1] :", productRow.children[1]);
+
+//extraction et verification des enfants de la ligne du produit (chaque td)
+        console.log("productRow.children:", productRow.children)//HTML collection est le resultat
+        console.log("productRow.children[0] :", productRow.children[0]); //La chose a vendre est la resultat
+        console.log("productRow.children[1] :", productRow.children[1]);//Le prix de la chose est la resultat
+
         // productRow.remove();  -->was placed to show we could remove the row
         const productName = productRow.children[0].innerText;
         const productPrice = productRow.children[1].innerText;
-        console.log("productName", productName);
-        console.log("productPrice", productPrice);
+        console.log("productName", productName);//verif qu'on a bien recupere ce qu'on veut
+        console.log("productPrice", productPrice);//verif qu'on a recupere ce qu'on veut
     })
 
 

@@ -41,9 +41,10 @@ function restartGame(){
   MIN = NUMBER-5;
   // console.log("new min is " + MIN);
   HINT.innerText = "";
-  REMAINING.innerText=""
+  REMAINING.innerText="";
   INPUT.disabled = false;
   INPUT.value="";
+  INPUT.focus();
   REPLAY.innerHTML="";
   PREVIOUS.innerHTML="";
 }
@@ -62,6 +63,7 @@ function gameCheck(){
   const guess = parseInt(Math.ceil(INPUT.valueAsNumber));
   // console.log("user guess " + guess);
   INPUT.value = "";
+  INPUT.focus();
 //Here we deal with the guess being too low by giving a hint
   //we also diminish attempts remaining by one and tell user how many tries they have left
   if((guess < NUMBER)&&remainingTries>0){
@@ -143,6 +145,7 @@ function gameCheck(){
 
 //****GAMEPLAY CODE BELOW****//
 
+INPUT.focus();
 //Here we Listen to the submit Guess button and when it's clicked:
 //we use the gameCheck function to deal appropriately with the user input.
 BTN.addEventListener("click", gameCheck);
