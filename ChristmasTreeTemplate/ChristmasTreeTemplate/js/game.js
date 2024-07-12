@@ -15,6 +15,11 @@ let config = {
 
 let game = new Phaser.Game(config); // instanciation
 let snowflakesGroup;
+let bellImage;
+let christmasMusic;
+let flake;
+let snowflakeTimer;
+let wintext;
 
 function preload() {
     this.load.image('background', './assets/images/back_2.png');//les arguments: nom donné à l'image, et où le trouver.
@@ -35,7 +40,12 @@ function preload() {
     this.load.image('boule21', './assets/images/obj/obj_21.png');
     this.load.image('boule08', './assets/images/obj/obj_08.png');
     this.load.image('treeBow', './assets/images/obj/obj_25.png');
+
     this.load.image('bear', './assets/images/obj/obj_05.png');
+    this.load.image('bell', './assets/images/obj/obj_02.png');
+    this.load.image('flake', './assets/images/obj/obj_10.png');
+
+    this.load.audio('christmasMusic', './assets/audio/christmasMusic.mp3');
 }
 
 
@@ -86,9 +96,26 @@ function create() {
     boule22bisImage.setScale(0.27);
     let treeBowImage = this.add.image(+292, +140, 'treeBow');
     treeBowImage.setScale(0.65);
-    let bearImage = this.add.image(+245, +785, 'bear');
+    let bearImage = this.add.image(+245, +785, 'bear').setInteractive();
+    bearImage.on('pointerdown', bearImageMouseLeftClick);
     bearImage.setScale(0.43);
+    
+    bellImage = this.add.image(+50, +820, 'bell').setInteractive();
+    bellImage.on('pointerdown', bellImageMouseLeftClick);
+    bellImage.setScale(0.45);
+    bellImage.alpha=0.4;
 
+
+    christmasMusic = this.sound.add('christmasMusic');
+
+
+    flakeImage = this.add.image(+340, 370, 'flake').setInteractive();
+    flakeImage.on('pointerdown', flakeImageMouseLeftClick);
+    flakeImage.setScale(0.25);
+    flakeImage.alpha=0.8;
+
+    wintext = this.add.text(160, 20, 'SEASONS GREETINGS!', {fontFamily: 'Arial', fontSize: 25, color: '#00ff00'});
+    wintext.alpha=0;
 
 
 
@@ -120,7 +147,7 @@ function create() {
     });
 
 
-    let snowflakeTimer = this.time.addEvent({
+    snowflakeTimer = this.time.addEvent({
         delay: 200,
         callback: letItSnow,
         repeat: -1 //# de fois à repeter APRES le premier appel (donc 4 = 5)
@@ -146,5 +173,34 @@ function letItSnow(){
     }
 }
 
+function bearImageMouseLeftClick(){
+    if(wintext.alpha===0){
+        wintext.alpha=1;
+    }
+    else{
+        wintext.alpha=0;
+    }
+}
 
-//boules dans le sapin
+function bellImageMouseLeftClick(){
+    if(bellImage.alpha === 0.4){
+        bellImage.alpha=1;
+        christmasMusic.play();
+    }
+    else{
+        bellImage.alpha = 0.4;
+        christmasMusic.pause();
+    }
+    
+}
+
+function flakeImageMouseLeftClick(){
+    if (flakeImage.alpha === 0.5){
+        flakeImage.alpha = 1;
+        snowflakeTimer.paused = false;
+    }
+    else{
+        flakeImage.alpha = 0.5;
+        snowflakeTimer.paused = true;
+    }
+}
