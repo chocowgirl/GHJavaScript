@@ -1,0 +1,83 @@
+/* /// CONRAD JESSICA /// */
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:gainsboro;
+}
+
+h1{
+    text-align: center;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+
+}
+
+h3{
+    font-size:larger;
+    color:rgb(73, 75, 179);
+}
+
+th{
+    color: rgb(70, 71, 170);
+}
+
+#divWrapper{
+    display: flex;
+    justify-content:center;
+}
+
+
+#divGame{
+    width: 40%;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+label{
+    display: block;
+    font-size: 18px;
+    width: 80%;
+}
+
+span{
+    font-weight: 900;
+    font-size:large;
+    color: blueviolet;
+    font-size: 21px;
+}
+
+input{
+    width: 35%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+button{
+    background-color: plum;
+    width: 35%;
+    height: 50px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+divRecap{
+    width: 50%;
+    display: inline-block;
+}
+
+.white{
+    background-color: gainsboro;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.green{
+    background-color: lightgreen;
+}
+
+table, td, th{
+    border-collapse: collapse;
+}
